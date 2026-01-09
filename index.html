@@ -1,2 +1,43 @@
-<link rel = "stylesheet" type = "text/css" href = "/style.css">
-Super Secret Movie Club 13
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSMC13</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scene">
+    <div class="background">
+      <h1 class="logo">SUPER SECRET<br>MOVIE CLUB 13</h1>
+    </div>
+
+    <svg class="blood-svg" viewBox="0 0 1000 2000" preserveAspectRatio="none">
+      <defs>
+        <mask id="blood-mask">
+          <rect width="100%" height="100%" fill="white" />
+          <path
+            class="drip"
+            d="
+              M0,0 H1000 V300
+              C920,340 860,280 800,360
+              C740,440 680,360 620,420
+              C560,480 500,380 440,420
+              C380,460 320,380 260,420
+              C200,460 140,400 80,460
+              C40,500 0,460 0,520 Z
+            "
+            fill="black"
+          />
+        </mask>
+      </defs>
+      <rect
+        class="blood-fill"
+        width="100%"
+        height="100%"
+        mask="url(#blood-mask)"
+      />
+    </svg>
+  </div>
+</body>
+</html>
