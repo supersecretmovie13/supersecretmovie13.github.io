@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body, .logo, .menu-item {
+  font-family: 'Share Tech Mono', monospace !important;
+}
+body {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+:root {
+  /* The iconic VCR Blue */
+  --background-color: #000000 !important; 
+  /* Pure White for the "OSD" (On Screen Display) feel */
+  --font-color: #ffffff !important;
+  --color-accent: #ffff00 !important; /* Yellow for highlights/headers */
+}
+
+body {
+  background-color: #000000 !important;
+  text-transform: uppercase; /* VCR menus were almost always ALL CAPS */
+}
+
+/* Override your red header */
+.header {
+  background: #000000 !important;
+  border-bottom: 4px solid #ffffff !important;
+}
+
+.logo {
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-weight: bold;
+  padding: 0 15px;
+  text-shadow: none;
+}
+/* Remove the vertical bars in the header and near titles */
+.header::before, 
+.header::after,
+.post-title::before,
+.logo::before {
+    display: none !important;
+}
+
+/* Fix the links to be VCR Yellow or White */
+a, .menu-item a, .post-title a {
+    color: #ffff00 !important; /* Yellow links are very VCR menu-style */
+    text-transform: uppercase;
+    text-shadow: none;
+}
+
+a:hover {
+    background: #ffffff !important;
+    color: #0000ff !important; /* Invert colors on hover */
+}
+/* The Movie List Index */
+.posts-list {
+    list-style: none;
+    counter-reset: vcr-counter;
+    padding: 0;
+}
+
+.posts-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Add automatic numbering (01, 02, 03...) */
+.posts-list-item::before {
+    counter-increment: vcr-counter;
+    content: counter(vcr-counter, decimal-leading-zero) " ";
+    margin-right: 20px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+

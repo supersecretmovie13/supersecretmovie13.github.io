@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "screenings"
+    label: "The Vault (Screenings)"
+    folder: "content/screenings"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Release Year", name: "year", widget: "number"}
+      - {label: "Screening Date", name: "date", widget: "datetime"}
+      - {label: "VHS Condition", name: "condition", widget: "select", options: ["Mint", "Worn", "Glitchy", "Needs Tracking"]}
+      - {label: "Body", name: "body", widget: "markdown"}

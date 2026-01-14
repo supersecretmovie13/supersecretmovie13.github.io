@@ -1,0 +1,22 @@
+baseURL = 'https://excellentawesome.com/'
+languageCode = 'en-us'
+title = 'SSMC13'
+theme = 'terminal'
+
+[params]
+  contentTypeName = "posts"
+  fullWidthTheme = false
+  centerTheme = true
+  showMenuItems = 5
+  readingTime = true
+  showLanguageSelector = false
+[params.contact]
+  phone = '12345'
+[menu]
+  [[menu.main]]
+    identifier = "screenings"
+    name = "screenings"
+    url = "/screenings"
+[params.logo]
+  logoText = "SSMC13"
+  logoHomeLink = "/"
